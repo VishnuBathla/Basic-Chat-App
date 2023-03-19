@@ -32,5 +32,5 @@ def receive():
         cl.send("Connected to the server\n".encode('utf-8'))
         thread=threading.Thread(target=handle,args=(cl,))
         thread.start()
-print("Welcome to the final show, hope you're wearing your best clothes")
+
 receive()
