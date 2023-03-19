@@ -66,7 +66,7 @@ class Client:
     def receive(self):
         while self.running:
             try:
-                message=self.sock.recv(1024)
+                message=self.sock.recv(1024).decode('utf-8')
                 if message =='Name':
                     self.sock.send(self.name.encode('utf-8'))
                 else:
